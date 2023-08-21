@@ -1,11 +1,49 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Image to .exp converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #imageSelector, #convertBtn {
+            margin: 10px 0;
+        }
+        #convertBtn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #convertBtn:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <input type="file" id="imageSelector">
-    <button id="convertBtn">Convert</button>
+    <div class="container">
+        <h2>Seleciona uma imagem e converte para .exp</h2>
+        <input type="file" id="imageSelector" accept=".jpg, .jpeg, .png">
+        <br>
+        <button id="convertBtn">Converter</button>
+    </div>
     <script src="./renderer.js"></script>
 </body>
 </html>
