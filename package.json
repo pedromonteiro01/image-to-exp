@@ -1,0 +1,26 @@
+{
+  "name": "exp-converter",
+  "version": "0.1.0",
+  "description": "Image to Exp converter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.yourdomain.yourappname",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^x.y.z",
+    "electron-builder": "^x.y.z"
+  }
+}
